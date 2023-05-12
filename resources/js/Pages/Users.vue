@@ -10,6 +10,9 @@
                     <th scope="col" class="px-6 py-3">
                         Email
                     </th>
+                    <th scope="col" class="px-6 py-3">
+                        Materias
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -19,6 +22,12 @@
                     </th>
                     <td class="px-6 py-4">
                         {{ usuario.email }}
+                    </td>
+                    <td>
+                        <span class="bg-gray-100 text-gray-800 text-xsfont-medium mr-2
+                        px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300" v-for="subject in usuario.subjects" 
+                        :key="subject.id">{{ subject.name }}
+                        </span>
                     </td>
                 </tr>
             </tbody>

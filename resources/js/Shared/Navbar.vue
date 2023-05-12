@@ -19,6 +19,10 @@
             <Link href="/nosotros" class="ext-xl text-white mr-6 hover:bg-white hover:text-indigo-400 px-4 py-2 rounded-3xl">
                 nosotros
             </Link>
+
+            <Link href="/usuarios" class="ext-xl text-white mr-6 hover:bg-white hover:text-indigo-400 px-4 py-2 rounded-3xl">
+                usuarios
+            </Link>
             
         </div>
 

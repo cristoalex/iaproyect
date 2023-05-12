@@ -33,13 +33,21 @@ Route::get('/chat', function () {
 
 Route::get('/usuarios', function () {
     return Inertia::render('Users', [
-        'usuarios' => User::all()->makeHidden([
-            'id',
-            'email_verified_at',
-            'created_at',
-            'updated_at',
-        ]),
+        // 'usuarios' => User::all()->makeHidden([
+        //     'id',
+        //     'email_verified_at',
+        //     'created_at',
+        //     'updated_at',
+        // ]),
+        'usuarios' => User::select('id','name','email')
+        ->with('subjects')
+        ->get(),
     ]);
+
+    // return User::with('subjects')
+    // ->select('id','name','email')
+    // ->get();
+
 });
 
 
